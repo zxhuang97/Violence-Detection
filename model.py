@@ -60,7 +60,7 @@ def get_c3d():
     output = Dropout(.5)(output)
     output = Dense(1024, activation='relu', name='fc7')(output)
     output = Dropout(.5)(output)
-    output = Dense(1, activation='softmax', name='fc8')(output)
+    output = Dense(1, activation='sigmoid', name='fc8')(output)
 
     return Model(input,output)
 
